@@ -30,7 +30,7 @@ public class BancoJava {
         conta.nConta = nConta;
         conta.saldo = saldo;
 
-
+        boolean continuar = true;
 
         System.out.println("===Seja Bem-Vindo ao Banco" + titular + "!===");
         System.out.println("1- Ver saldo");
@@ -40,8 +40,44 @@ public class BancoJava {
         System.out.println("0- Sair");
 
         int opcao = sc.nextInt();
+        sc.nextLine();
 
-        sc.close();
+        switch (opcao) {
+
+            case 1:
+
+                System.out.println("Seu saldo atual é R$:" + saldo );
+                break;
+
+            case 2:
+
+                break;
+
+            case 3:
+
+
+
+                break;
+
+            case 4:
+
+                System.out.println("===Extrato===");
+                for (string linha: extrato) {
+                    System.out.println(linha);
+                }
+
+                break;
+
+            case 5:
+
+                continuar = false;
+                System.out.println("Saindo... Obrigado por utilizar nossos serviços!");
+
+                break;
+
+            default:
+                System.out.println("opcao invalida. tente novamente");
+        }
 
 
     }
