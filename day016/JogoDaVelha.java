@@ -27,6 +27,17 @@ public class JogoDaVelha {
                 continue;
             }
 
+            //verificar vitória
+            if (verificarVitoria(tabuleiro, jogadorAtual)) {
+                exibirTabuleiro(tabuleiro); // mostrar tabuleiro final
+                System.out.println("Jogador " + jogadorAtual + " venceu!");
+                break;
+            }else if (tabuleiroCompleto(tabuleiro)) {
+                    exibirTabuleiro(tabuleiro);
+                System.out.println("O jogo terminou em empate");
+                break;
+            }
+
             //Alternar entre jogadores
             if (jogadorAtual == 'X') {
                 jogadorAtual = 'O';
@@ -51,10 +62,44 @@ public class JogoDaVelha {
     }
 
     public static boolean verificarVitoria(char[][] tabuleiro, char jogador) {
-        for (int i = 0; i > 3; i++){
-            if (tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador) {
-                return true
+
+        //verifica linha
+        for (int i = 0; i < 3; i++){
+            if (tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador && tabuleiro[i][2] == jogador) {
+                return true;
             }
         }
+
+        //verifica coluna
+        for (int j = 0; j < 3; j++){
+            if (tabuleiro[0][j] == jogador && tabuleiro[1][j] == jogador && tabuleiro[2][j] == jogador) {
+                return true;
+            }
+        }
+
+        //verifica diagonal
+        if (tabuleiro[0][0] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][2] == jogador){
+            return true;
+        }
+
+        //verifica outra diagonal
+        if (tabuleiro[0][2] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][0] == jogador){
+            return true;
+        }
+
+        return false;
+
+
+    }
+
+    public static boolean tabuleiroCompleto(char[][] tabuleiro) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (tabuleiro[i][j] == '-'){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
