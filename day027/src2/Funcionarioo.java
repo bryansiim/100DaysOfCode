@@ -1,9 +1,9 @@
-public class Funcionario {
+public class Funcionarioo {
 
     private String nome;
     private double salario;
 
-    public Funcionario(String nome, double salario){
+    public Funcionarioo(String nome, double salario){
         this.nome = nome;
         this.salario = salario;
     }

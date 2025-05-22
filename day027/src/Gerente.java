@@ -1,4 +1,4 @@
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionarioo {
 
     //Valor adicional ao salário
     private double bonus;

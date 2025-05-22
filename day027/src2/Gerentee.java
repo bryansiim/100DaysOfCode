@@ -1,9 +1,9 @@
-public class Gerente extends Funcionario {
+public class Gerentee extends Funcionarioo {
 
     //Valor adicional ao salário
     private double bonus;
 
-    public Gerente(String nome, double salario, double bonus){
+    public Gerentee(String nome, double salario, double bonus){
         super(nome, salario);
         this.bonus = bonus;
 

@@ -1,4 +1,4 @@
-public class Vendedor extends Funcionario {
+public class Vendedor extends Funcionarioo {
 
     private double comissao;
 
