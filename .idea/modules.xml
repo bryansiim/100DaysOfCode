@@ -26,6 +26,7 @@
       <module fileurl="file://$PROJECT_DIR$/day027/day027.iml" filepath="$PROJECT_DIR$/day027/day027.iml" />
       <module fileurl="file://$PROJECT_DIR$/day028/day028.iml" filepath="$PROJECT_DIR$/day028/day028.iml" />
       <module fileurl="file://$PROJECT_DIR$/day029/day030.iml" filepath="$PROJECT_DIR$/day029/day030.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day030SistemaBancario/day030SistemaBancario.iml" filepath="$PROJECT_DIR$/day030SistemaBancario/day030SistemaBancario.iml" />
     </modules>
   </component>
 </project>
